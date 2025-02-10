@@ -1,0 +1,17 @@
+{
+    "name": "shank/mvc-crud",
+    "description": "mvc crud basic operations for brginers using PHP",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Shan Karunarathne"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Core\\": "core/"
+        }
+    }
+}
