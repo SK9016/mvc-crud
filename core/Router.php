@@ -1,20 +1,25 @@
 <?php
+
 namespace Core;
 
-class Router {
+class Router
+{
     protected $routes = [];
 
     // Method to register routes
-    public function get($route, $action) {
+    public function get($route, $action)
+    {
         $this->routes['GET'][$route] = $action;
     }
 
-    public function post($route, $action) {
+    public function post($route, $action)
+    {
         $this->routes['POST'][$route] = $action;
     }
 
     // Dispatch request to the correct controller method
-    public function dispatch($method, $url) {
+    public function dispatch($method, $url)
+    {
         if (isset($this->routes[$method][$url])) {
             $action = $this->routes[$method][$url];
 
@@ -30,4 +35,3 @@ class Router {
         echo "404 Not Found!";
     }
 }
-
